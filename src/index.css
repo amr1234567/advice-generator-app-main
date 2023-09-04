@@ -1,0 +1,97 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+
+/* Colors */
+
+:root {
+  /* Primary  */
+  --Light-Cyan: hsl(193, 38%, 86%);
+  --Neon-Green: #52ffa8;
+
+  /* Neutral  */
+  --Grayish-Blue: hsl(217, 19%, 38%);
+  --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+  --Dark-Blue: hsl(218, 23%, 16%);
+}
+
+/* General Styling */
+
+* {
+  font-family: 'Manrope', sans-serif;
+}
+
+/* Styling */
+
+body {
+  background-color: var(--Dark-Blue);
+}
+
+.app {
+  width: 33%;
+  height: 50%;
+  margin: 10rem auto;
+  padding: 1.5rem;
+  text-align: center;
+  background-color: var(--Dark-Grayish-Blue);
+  border-radius: 1rem;
+  color: var(--Light-Cyan);
+  position: relative;
+}
+
+.num {
+  text-transform: uppercase;
+  color: var(--Neon-Green);
+  font-size: 0.5rem;
+  letter-spacing: 0.3rem;
+}
+
+.seperator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+
+.line {
+  border: 1px solid var(--Light-Cyan);
+  height: 0px;
+  width: 100%;
+}
+
+.button {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: var(--Neon-Green);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(50%);
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+}
+
+.button:hover {
+  box-shadow: 0px 0px 18px 4px #52ffa8;
+}
+
+.button>img {
+  width: 1rem;
+}
+
+@media (max-width:500px) {
+  .app {
+    width: 90%;
+    padding: 4rem;
+  }
+}
+
+@media (max-width:350px) {
+  .app{
+    padding: 1.5rem;
+  }
+}
